@@ -1,0 +1,51 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/CMakeFiles/ext_mve"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/CMakeFiles/ext_mve.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/CMakeFiles/ext_mve-complete.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/mve/src/ext_mve-stamp/ext_mve-install.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/mve/src/ext_mve-stamp/ext_mve-mkdir.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/mve/src/ext_mve-stamp/ext_mve-download.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/mve/src/ext_mve-stamp/ext_mve-update.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/mve/src/ext_mve-stamp/ext_mve-patch.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/mve/src/ext_mve-stamp/ext_mve-configure.rule"
+		},
+		
+		{
+			"file" : "/home/silence401/wujinbo/rayinsection/build/elibs/mve/src/ext_mve-stamp/ext_mve-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "ext_mve" ],
+		"name" : "ext_mve"
+	}
+}

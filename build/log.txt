@@ -1,0 +1,80 @@
+沙盒开始
+15372 3
+沙盒结束
+6
+91434
+15372
+-0.676044
+12934
+Building BVH fromface size: 30478
+done. 
+Initializing scene with 26 views...
+Initialized 26 views (max ID is 25), took 1ms.
+?
+what fuck
+30478
+3
+cost: 36056
+epoch: 9
+giabian: 7089
+30478
+3
+giabian: 16293
+30478
+3
+giabian: 4296
+30478
+3
+giabian: 3105
+30478
+3
+cost: 36056
+costnow: 36024.5
+cost: 36024.5
+epoch: 8
+giabian: 7089
+30478
+3
+giabian: 16293
+30478
+3
+giabian: 4286
+30478
+3
+giabian: 3003
+30478
+3
+cost: 36024.5
+costnow: 36005.9
+cost: 36005.9
+epoch: 7
+giabian: 7089
+30478
+3
+giabian: 16293
+30478
+3
+giabian: 4271
+30478
+3
+giabian: 2908
+30478
+3
+cost: 36005.9
+costnow: 36001.8
+cost: 36001.8
+epoch: 6
+giabian: 7036
+30478
+3
+giabian: 16293
+30478
+3
+giabian: 4271
+30478
+3
+giabian: 2908
+30478
+3
+cost: 36001.8
+costnow: 36001.8
