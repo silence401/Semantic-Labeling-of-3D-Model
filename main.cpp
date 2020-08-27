@@ -30,7 +30,7 @@ using namespace std;
 inline size_t max_num(vector<size_t> &A) {
 	//遍历，获得每个元素出现的次数
     //cout<<1<<endl;
-    size_t res = 4;
+    size_t res = 5;
     int maxcnt = 0;
      for(auto a : A)
      {
@@ -221,6 +221,8 @@ int main()
     objFile<<"vt "<<0.5<<' '<<75.0/256<<endl;
     objFile<<"vt "<<0.5<<' '<<125.0/256<<endl;
     objFile<<"vt "<<0.5<<' '<<175.0/256<<endl;
+    objFile<<"vt "<<0.5<<' '<<225.0/256<<endl;
+
 
     for(auto v : vertices){
         objFile<<'v'<<' '<<v<<endl;
@@ -253,7 +255,7 @@ int main()
         //  }ost = costV() + costD()
     double cost = Energy(Adj, faceslabel, W, p);
     int face_num = faces.size()/3;
-   // vector<vector<size_t> >tmplabel(faceslabel);
+    vector<vector<size_t> >tmplabel(faceslabel);
     vector<vector<size_t> >reslabel(faceslabel);
     int labelnum = 4;
     int epoch = 10;
@@ -261,23 +263,29 @@ int main()
     while(epoch--){
         cout<<"epoch: "<<epoch<<endl;
         int flag = 0;
+        double costnow = cost;
       //  cout<<"cost: "<<cost<<endl;
         for(int i = 0; i < labelnum; i++){
        //     cout<<"here2"<<endl;
-            double tmpcost = alpha_expansion(i, Adj, face_num, faceslabel, p, W, reslabel);
+            double tmpcost = alpha_expansion(i, Adj, face_num, tmplabel, p, W, reslabel);
          //   cout<<"here3"<<endl;
-            //cout<<"tmpcost: "<<tmpcost<<endl;
-            if (tmpcost < cost)
+            cout<<"tmpcost: "<<tmpcost<<endl;
+            if (tmpcost < costnow)
             {
-                flag = 1;
-                cost = tmpcost;
-                faceslabel = reslabel;
+                costnow = tmpcost;
+                tmplabel = reslabel;
 
             }
             
         }
         cout<<"cost: "<<cost<<endl;
        // cout<<"costnow: "<<costnow<<endl;
+       if(cost > costnow)
+       {
+           flag  = 1;
+           cost = costnow;
+           faceslabel = tmplabel;
+       }
         if(!flag)
         break;
     }

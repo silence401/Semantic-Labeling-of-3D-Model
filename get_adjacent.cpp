@@ -38,7 +38,7 @@ double costD(size_t face_index, int  label, vector<vector<size_t> > &p)
 {
    // cout<<"costD"<<endl;
     if(p[face_index].size() == 0)
-    return 0;
+    return 1;
 
     double cnt  = 0;
     for(int i=0;  i<p[face_index].size(); i++)
@@ -47,7 +47,7 @@ double costD(size_t face_index, int  label, vector<vector<size_t> > &p)
         if(l==label)
         cnt += 1.0;
     }
-   // cout<<"costD: "<<1-(cnt/p[face_index].size())<<endl;
+    cout<<"costD: "<<1-(cnt/p[face_index].size())<<endl;
     return 1-(cnt/p[face_index].size());
 
 }
@@ -82,7 +82,7 @@ Edges  getadjacent(vector<math::Vec3f> &vertices, vector<size_t> &faces)
     res.adj = adj;
     return res;
 }
-double Energy(Edges Adj, vector<vector<size_t> > &tmplabel, vector<vector<double> > &W, vector<vector<size_t> > &p, double s)
+double Energy(Edges &Adj, vector<vector<size_t> > &tmplabel, vector<vector<double> > &W, vector<vector<size_t> > &p, double s)
 {
   //  cout<<"Energy"<<endl;
     double sumcost = 0;
@@ -91,10 +91,10 @@ double Energy(Edges Adj, vector<vector<size_t> > &tmplabel, vector<vector<double
     cout<<tmplabel[0][0]<<endl;
     for(int i = 0; i < face_num; i++)
     {
-        sumcost += (1-costD(i, tmplabel[i][0], p));
+        sumcost += (costD(i, tmplabel[i][0], p));
         //cout<<"sumcost:"<<sumcost<<endl;
     }
-    sumcost =  sumcost;
+     cout<<"D: "<<sumcost;
     for(int i=0; i<Adj.edges.size(); i++)
     {
         Edge t = Adj.edges[i];
@@ -105,11 +105,17 @@ double Energy(Edges Adj, vector<vector<size_t> > &tmplabel, vector<vector<double
      //   cout<<"f: "<<face_index1<<' '<<face_index2<<endl;
         sumcost = sumcost + 0.2*costV(face_index1, face_index2, tmplabel[face_index1][0], tmplabel[face_index2][0], W);
     }
+    cout<<"suncost: "<< sumcost<<endl;
     return sumcost;
 }
+// void get_adjacent_faces(int fi, Edge &Adj， )
+// {
 
+// }
 double alpha_expansion(size_t label, Edges &Adj, int face_num, vector<vector<size_t> > &faceslabel, vector<vector<size_t> > &p, vector<vector<double> > &W, vector<vector<size_t> > &newfacelabel)
 {
+    if(label == 3)
+    cout<<"What fuck2"<<endl;
   //  cout<<"alpha expansion"<<endl;
     int extrapoint = 0;
     typedef Graph<double,double,double> GraphType;

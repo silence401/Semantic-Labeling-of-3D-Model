@@ -40,5 +40,5 @@ double costD(size_t face_index, int label, vector<vector<size_t> > &p);
 
 double costV(size_t fi1, size_t fi2, int fl1, int fl2, vector<vector<double> > &W, double s=1.0);
 
-double Energy(Edges Adj, vector<vector<size_t> > &tmplabel, vector<vector<double> > &W, vector<vector<size_t> > &p, double s=1.0);
+double Energy(Edges &Adj, vector<vector<size_t> > &tmplabel, vector<vector<double> > &W, vector<vector<size_t> > &p, double s=1.0);
 #endif
