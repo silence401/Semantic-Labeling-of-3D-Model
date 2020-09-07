@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/raycast.dir/get_adjacent.cpp.o"
+  "CMakeFiles/raycast.dir/alpha_expansion.cpp.o"
   "CMakeFiles/raycast.dir/main.cpp.o"
   "raycast.pdb"
   "raycast"

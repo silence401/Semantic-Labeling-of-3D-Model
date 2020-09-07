@@ -57,28 +57,28 @@ include CMakeFiles/raycast.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/raycast.dir/flags.make
 
-CMakeFiles/raycast.dir/get_adjacent.cpp.o: CMakeFiles/raycast.dir/flags.make
-CMakeFiles/raycast.dir/get_adjacent.cpp.o: ../get_adjacent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/silence401/wujinbo/rayinsection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/raycast.dir/get_adjacent.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raycast.dir/get_adjacent.cpp.o -c /home/silence401/wujinbo/rayinsection/get_adjacent.cpp
+CMakeFiles/raycast.dir/alpha_expansion.cpp.o: CMakeFiles/raycast.dir/flags.make
+CMakeFiles/raycast.dir/alpha_expansion.cpp.o: ../alpha_expansion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/silence401/wujinbo/rayinsection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/raycast.dir/alpha_expansion.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/raycast.dir/alpha_expansion.cpp.o -c /home/silence401/wujinbo/rayinsection/alpha_expansion.cpp
 
-CMakeFiles/raycast.dir/get_adjacent.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raycast.dir/get_adjacent.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/silence401/wujinbo/rayinsection/get_adjacent.cpp > CMakeFiles/raycast.dir/get_adjacent.cpp.i
+CMakeFiles/raycast.dir/alpha_expansion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/raycast.dir/alpha_expansion.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/silence401/wujinbo/rayinsection/alpha_expansion.cpp > CMakeFiles/raycast.dir/alpha_expansion.cpp.i
 
-CMakeFiles/raycast.dir/get_adjacent.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raycast.dir/get_adjacent.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/silence401/wujinbo/rayinsection/get_adjacent.cpp -o CMakeFiles/raycast.dir/get_adjacent.cpp.s
+CMakeFiles/raycast.dir/alpha_expansion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/raycast.dir/alpha_expansion.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/silence401/wujinbo/rayinsection/alpha_expansion.cpp -o CMakeFiles/raycast.dir/alpha_expansion.cpp.s
 
-CMakeFiles/raycast.dir/get_adjacent.cpp.o.requires:
+CMakeFiles/raycast.dir/alpha_expansion.cpp.o.requires:
 
-.PHONY : CMakeFiles/raycast.dir/get_adjacent.cpp.o.requires
+.PHONY : CMakeFiles/raycast.dir/alpha_expansion.cpp.o.requires
 
-CMakeFiles/raycast.dir/get_adjacent.cpp.o.provides: CMakeFiles/raycast.dir/get_adjacent.cpp.o.requires
-	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/get_adjacent.cpp.o.provides.build
-.PHONY : CMakeFiles/raycast.dir/get_adjacent.cpp.o.provides
+CMakeFiles/raycast.dir/alpha_expansion.cpp.o.provides: CMakeFiles/raycast.dir/alpha_expansion.cpp.o.requires
+	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/alpha_expansion.cpp.o.provides.build
+.PHONY : CMakeFiles/raycast.dir/alpha_expansion.cpp.o.provides
 
-CMakeFiles/raycast.dir/get_adjacent.cpp.o.provides.build: CMakeFiles/raycast.dir/get_adjacent.cpp.o
+CMakeFiles/raycast.dir/alpha_expansion.cpp.o.provides.build: CMakeFiles/raycast.dir/alpha_expansion.cpp.o
 
 
 CMakeFiles/raycast.dir/main.cpp.o: CMakeFiles/raycast.dir/flags.make
@@ -107,13 +107,13 @@ CMakeFiles/raycast.dir/main.cpp.o.provides.build: CMakeFiles/raycast.dir/main.cp
 
 # Object files for target raycast
 raycast_OBJECTS = \
-"CMakeFiles/raycast.dir/get_adjacent.cpp.o" \
+"CMakeFiles/raycast.dir/alpha_expansion.cpp.o" \
 "CMakeFiles/raycast.dir/main.cpp.o"
 
 # External object files for target raycast
 raycast_EXTERNAL_OBJECTS =
 
-raycast: CMakeFiles/raycast.dir/get_adjacent.cpp.o
+raycast: CMakeFiles/raycast.dir/alpha_expansion.cpp.o
 raycast: CMakeFiles/raycast.dir/main.cpp.o
 raycast: CMakeFiles/raycast.dir/build.make
 raycast: maxflow/libmaxflow.a
@@ -151,7 +151,7 @@ CMakeFiles/raycast.dir/build: raycast
 
 .PHONY : CMakeFiles/raycast.dir/build
 
-CMakeFiles/raycast.dir/requires: CMakeFiles/raycast.dir/get_adjacent.cpp.o.requires
+CMakeFiles/raycast.dir/requires: CMakeFiles/raycast.dir/alpha_expansion.cpp.o.requires
 CMakeFiles/raycast.dir/requires: CMakeFiles/raycast.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/raycast.dir/requires

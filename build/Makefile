@@ -175,32 +175,32 @@ maxflow/fast:
 	$(MAKE) -f maxflow/CMakeFiles/maxflow.dir/build.make maxflow/CMakeFiles/maxflow.dir/build
 .PHONY : maxflow/fast
 
-get_adjacent.o: get_adjacent.cpp.o
+alpha_expansion.o: alpha_expansion.cpp.o
 
-.PHONY : get_adjacent.o
+.PHONY : alpha_expansion.o
 
 # target to build an object file
-get_adjacent.cpp.o:
-	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/get_adjacent.cpp.o
-.PHONY : get_adjacent.cpp.o
+alpha_expansion.cpp.o:
+	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/alpha_expansion.cpp.o
+.PHONY : alpha_expansion.cpp.o
 
-get_adjacent.i: get_adjacent.cpp.i
+alpha_expansion.i: alpha_expansion.cpp.i
 
-.PHONY : get_adjacent.i
+.PHONY : alpha_expansion.i
 
 # target to preprocess a source file
-get_adjacent.cpp.i:
-	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/get_adjacent.cpp.i
-.PHONY : get_adjacent.cpp.i
+alpha_expansion.cpp.i:
+	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/alpha_expansion.cpp.i
+.PHONY : alpha_expansion.cpp.i
 
-get_adjacent.s: get_adjacent.cpp.s
+alpha_expansion.s: alpha_expansion.cpp.s
 
-.PHONY : get_adjacent.s
+.PHONY : alpha_expansion.s
 
 # target to generate assembly for a file
-get_adjacent.cpp.s:
-	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/get_adjacent.cpp.s
-.PHONY : get_adjacent.cpp.s
+alpha_expansion.cpp.s:
+	$(MAKE) -f CMakeFiles/raycast.dir/build.make CMakeFiles/raycast.dir/alpha_expansion.cpp.s
+.PHONY : alpha_expansion.cpp.s
 
 main.o: main.cpp.o
 
@@ -242,9 +242,9 @@ help:
 	@echo "... glfw"
 	@echo "... ext_mve"
 	@echo "... maxflow"
-	@echo "... get_adjacent.o"
-	@echo "... get_adjacent.i"
-	@echo "... get_adjacent.s"
+	@echo "... alpha_expansion.o"
+	@echo "... alpha_expansion.i"
+	@echo "... alpha_expansion.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

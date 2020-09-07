@@ -3676,16 +3676,18 @@ block.h
 assert.h
 -
 
-/home/silence401/wujinbo/rayinsection/get_adjacent.cpp
-get_adjacent.h
-/home/silence401/wujinbo/rayinsection/get_adjacent.h
+/home/silence401/wujinbo/rayinsection/alpha_expansion.cpp
+alpha_expansion.h
+/home/silence401/wujinbo/rayinsection/alpha_expansion.h
 
-/home/silence401/wujinbo/rayinsection/get_adjacent.h
+/home/silence401/wujinbo/rayinsection/alpha_expansion.h
 bits/stdc++.h
 -
 mve/scene.h
 -
 graph.h
+-
+Eigen/Core
 -
 
 /home/silence401/wujinbo/rayinsection/main.cpp
@@ -3694,6 +3696,14 @@ bits/stdc++.h
 future
 -
 typeinfo
+-
+io.h
+-
+unistd.h
+-
+sys/stat.h
+-
+sys/types.h
 -
 acc/bvh_tree.h
 -
@@ -3731,8 +3741,6 @@ igl/read_triangle_mesh.h
 -
 igl/opengl/glfw/Viewer.h
 -
-igl/readPLY.h
--
-get_adjacent.h
-/home/silence401/wujinbo/rayinsection/get_adjacent.h
+alpha_expansion.h
+/home/silence401/wujinbo/rayinsection/alpha_expansion.h
 
