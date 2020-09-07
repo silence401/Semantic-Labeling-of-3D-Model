@@ -11,6 +11,11 @@ obj mtl
 example
 INPUT:
 ![mesh](./src/mesh.png)
+
+<center class="half">
+    <img src=./src/label1.png width="200"/><img src=./src/label2.png width="200"/><img src="图片链接" width="200"/>
+</center>
+
 ![label](./src/label1.png)
 ![label](./src/label2.png)
 
