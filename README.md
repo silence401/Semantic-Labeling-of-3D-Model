@@ -10,11 +10,11 @@ obj mtl
 
 example
 INPUT:
-![mesh](./src/mesh/.png)
+![mesh](./src/mesh.png)
 ![label](./src/label1.png)
 ![label](./src/label2.png)
 
 OUTPUT:
-![result](./result1.png)
-![result](./result2.png)
-![result](./result3.png)
+![result](./src/result1.png)
+![result](./src/result2.png)
+![result](./src/result3.png)
