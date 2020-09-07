@@ -9,7 +9,7 @@
 # Faces: 30478
 #
 ####
-mtllib ./scene_dense_mesh_refine_texture.obj.mtl
+mtllib ./mesh.mtl
 
 vn -3.954305 -2.897727 -3.913443
 v -0.676044 -0.672827 6.707878 0.752941 0.752941 0.752941
