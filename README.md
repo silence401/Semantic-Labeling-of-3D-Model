@@ -12,9 +12,7 @@ example
 INPUT:
 ![mesh](./src/mesh.png)
 
-<center class="half">
-    <img src=./src/label1.png width="200"/><img src=./src/label2.png width="200"/><img src="./src/label3.png" width="200"/>
-</center>
+| <img src=./src/label1.png width="310"/> | <img src=./src/label2.png width="310"/>
 
 
 OUTPUT:
