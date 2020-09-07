@@ -10,12 +10,10 @@ obj mtl
 
 example
 INPUT:
-![mesh](./src/mesh.png)
+| <img src=./src/mesh.png width="200"/> |
 
-| <img src=./src/label1.png width="310"/> | <img src=./src/label2.png width="310"/>
+| <img src=./src/label1.png width="200"/> | <img src=./src/label2.png width="200"/> | <img src=./src/label3.png width="200"/> 
 
 
 OUTPUT:
-![result](./src/result1.png)
-![result](./src/result2.png)
-![result](./src/result3.png)
+| <img src=./src/result1.png width="200"/> | <img src=./src/result2.png width="200"/> | <img src=./src/result3.png width="200"/>
