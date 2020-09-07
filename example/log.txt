@@ -1,0 +1,17 @@
+Mesh Read Over!
+201244
+1202973
+201244
+Princal Curvature Calculate Done!
+Building BVH fromface size: 400991
+done. 
+Initializing scene with 482 views...
+Initialized 482 views (max ID is 481), took 14ms.
+r:0g:0b:255
+r:0g:255b:0
+r:0g:0b:0
+r:255g:255b:0
+r:255g:0b:0
+r:0g:255b:255
+r:255g:255b:255
+r:255g:0b:255
