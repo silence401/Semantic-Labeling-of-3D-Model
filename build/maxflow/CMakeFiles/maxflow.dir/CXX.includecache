@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/silence401/wujinbo/rayinsection/maxflow/block.h
+block.h
+/home/silence401/wujinbo/rayinsection/maxflow/block.h
+stdlib.h
+-
+
+/home/silence401/wujinbo/rayinsection/maxflow/graph.cpp
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+graph.h
+/home/silence401/wujinbo/rayinsection/maxflow/graph.h
+instances.inc
+/home/silence401/wujinbo/rayinsection/maxflow/instances.inc
+
+/home/silence401/wujinbo/rayinsection/maxflow/graph.h
+string.h
+-
+block.h
+/home/silence401/wujinbo/rayinsection/maxflow/block.h
+assert.h
+-
+
+/home/silence401/wujinbo/rayinsection/maxflow/instances.inc
+graph.h
+/home/silence401/wujinbo/rayinsection/maxflow/graph.h
+
+/home/silence401/wujinbo/rayinsection/maxflow/maxflow.cpp
+stdio.h
+-
+graph.h
+/home/silence401/wujinbo/rayinsection/maxflow/graph.h
+instances.inc
+/home/silence401/wujinbo/rayinsection/maxflow/instances.inc
+

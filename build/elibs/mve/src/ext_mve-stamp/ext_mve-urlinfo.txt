@@ -1,0 +1,3 @@
+repository='external project URL'
+module='/home/silence401/wujinbo/mve.zip'
+tag=''
