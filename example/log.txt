@@ -15,3 +15,32 @@ r:255g:0b:0
 r:0g:255b:255
 r:255g:255b:255
 r:255g:0b:255
+Energy
+D: 130087   sumcost: 234482
+cost: 234482
+epoch: 1
+giabian: 96007
+Energy
+D: 143369   sumcost: 247362
+giabian: 294867
+Energy
+D: 146927   sumcost: 250414
+giabian: 57876
+Energy
+D: 141657   sumcost: 245846
+giabian: 159143
+Energy
+D: 147008   sumcost: 250592
+giabian: 83865
+Energy
+D: 143419   sumcost: 247482
+giabian: 102614
+Energy
+D: 144498   sumcost: 248401
+giabian: 57255
+Energy
+D: 141506   sumcost: 245699
+giabian: 64705
+Energy
+D: 141438   sumcost: 245632
+cost: 234482

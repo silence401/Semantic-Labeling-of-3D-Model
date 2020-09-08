@@ -255,8 +255,8 @@ int main(int argc, char **argv)
            
         }
            ++num;
-           //if(num == 200)
-           //break;
+        //    if(num == 10)
+        //    break;
 
     }
     cerr<<"labelindex: "<<labelindex<<endl;

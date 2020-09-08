@@ -33,6 +33,7 @@ double costV(size_t fi1, size_t fi2, int fl1, int fl2, vector<vector<double> > &
     sum = sum*s;
   //  cout<<"sum: "<<sum<<endl;
    // cout<<"costV: "<<sum<<endl;
+    cout<<"V: "<<sum<<endl;
     return min(1.0, sum);
 }
 double costVN(size_t fi1, size_t fi2, int fl1, int fl2, vector<vector<double> > &W, double s)
@@ -139,7 +140,7 @@ double Energy(int labelnum, Edges &Adj, vector<vector<size_t> > &tmplabel, vecto
         int face_index1 = Adj.adj[t][0];
         int face_index2 = Adj.adj[t][1];
      //   cout<<"f: "<<face_index1<<' '<<face_index2<<endl;
-        sumcost = sumcost + 0.2*costV(face_index1, face_index2, tmplabel[face_index1][0], tmplabel[face_index2][0], W, 0.2);
+        sumcost = sumcost + 0.2*costV(face_index1, face_index2, tmplabel[face_index1][0], tmplabel[face_index2][0], W, 0.02);
     }
     cout<<"   sumcost: "<< sumcost<<endl;
     return sumcost;
@@ -168,9 +169,9 @@ double alpha_expansion(size_t label, Edges &Adj, int face_num, int labelnum, vec
             if(faceslabel[face_index1] != faceslabel[face_index2])
             {
                 g->add_node();
-                double costv1 = costV(face_index1, face_index2, faceslabel[face_index1][0], label, W, 0.2);
-                double costv2 = costV(face_index1, face_index2, label, faceslabel[face_index2][0], W, 0.2);
-                double costv3 = costV(face_index1, face_index2, faceslabel[face_index1][0], faceslabel[face_index2][0], W, 0.2);
+                double costv1 = costV(face_index1, face_index2, faceslabel[face_index1][0], label, W, 0.02);
+                double costv2 = costV(face_index1, face_index2, label, faceslabel[face_index2][0], W, 0.02);
+                double costv3 = costV(face_index1, face_index2, faceslabel[face_index1][0], faceslabel[face_index2][0], W, 0.02);
              //  cout<<"edge: "<<costv1<<' '<<costv2<<endl;
              //  cout<<"tedge: "<<costv3<<endl;
                 g -> add_edge(face_index1, face_num+extrapoint,    /* capacities */  costv1, costv1);
@@ -181,7 +182,7 @@ double alpha_expansion(size_t label, Edges &Adj, int face_num, int labelnum, vec
             else
             {
                 
-                double costv = costV(face_index1, face_index2, faceslabel[face_index1][0], label, W, 0.2);
+                double costv = costV(face_index1, face_index2, faceslabel[face_index1][0], label, W, 0.02);
                 g -> add_edge(face_index1, face_index2, costv, costv);
             }
 
