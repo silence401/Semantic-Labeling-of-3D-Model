@@ -84,7 +84,8 @@ inline size_t max_num(vector<size_t> &A, int labelnum) {
               maxcnt = A[i];
               res = i;
           }
-    }
+    } 
+        //    break;
     return res;
 }
 int main(int argc, char **argv)
@@ -173,8 +174,9 @@ int main(int argc, char **argv)
     }catch (exception& e){
         cerr << "could not open scene" << endl;
     }
-    vector<mve::View::Ptr> views;
+    //vector<mve::View::Ptr> views;
     mve::Scene::ViewList const & aviews = scene->get_views();
+    //cout<<"views.use_count()"<<views.use_count()<<endl;
     //read MVE over
     
 
@@ -183,12 +185,21 @@ int main(int argc, char **argv)
     map<color, int> mlabelindex;
     int num = 0;
     int labelindex = 0;
+    //#pragma omp parallel for
     for(mve::View::Ptr view : aviews){
         cerr<<"第 "<<num<<"个view"<<endl;
+        cout<<"view.use_count():"<<view.use_count()<<endl;
         mve::CameraInfo const & camera = view->get_camera();
-        mve::View::ImageProxy const * proxy = view->get_image_proxy(conf.image);
+       // cout<<"占用1"<<endl;
+       // cout<<"占用2"<<endl;
         //cv::Mat img = cv::imread(view->get_directory()+'/'+image_name+".png");
+   //     weak_ptr<mve::ByteImage> image = view->get_byte_image(conf.image);
         mve::ByteImage::Ptr image = view->get_byte_image(conf.image);
+        mve::View::ImageProxy const * proxy = view->get_image_proxy(conf.image);
+
+        cout<<"image.use_count:"<<image.use_count()<<endl;
+      //  cout<<"占用3"<<endl;
+        //mve::View::ImageProxy const * proxy = view->get_image_proxy(conf.image);
        //  mve::ByteImage::Ptr image = mve::ByteImage::create(view->get_byte_image(image_name));
     
         if(image == NULL){
@@ -200,16 +211,16 @@ int main(int argc, char **argv)
         math::Vec3f origin;
         camera.fill_camera_pos(*origin);
         math::Matrix3f invproj;
-        camera.fill_inverse_calibration(*invproj, proxy->width, proxy->height);
+        camera.fill_inverse_calibration(*invproj, image->width(), image->height());
         math::Matrix3f c2w_rot;
         camera.fill_cam_to_world_rot(*c2w_rot);
        // map<color, int> colorindex;
        // int labelindex = 0;
         #pragma omp parallel for
-        for(int y = 0; y < proxy->height; y++){
+        for(int y = 0; y < image->height(); y++){
            if(y%4 == 0)
            continue;
-            for(int x = 0; x < proxy->width; x++){
+            for(int x = 0; x < image->width(); x++){
                 if(x%4 == 0)
                 continue;
                 acc::Ray ray;
@@ -226,6 +237,7 @@ int main(int argc, char **argv)
                   int g = int((*image)(x, y, 1));
                   int b = int((*image)(x, y, 2));
                   color tcolor(r, g, b);
+                  
 
                   //待修改
 
@@ -254,9 +266,17 @@ int main(int argc, char **argv)
             }
            
         }
+         //  delete camera;
+       //    delete proxy;
+          // delete image;
+          //shared_ptr 计数
+          cout<<"shared_ptr 计数: "<<image.use_count()<<endl;
+          cout<<"image:"<<image<<endl;
+
+          
            ++num;
-        //    if(num == 10)
-        //    break;
+           // if(num == 20)
+          //  break;
 
     }
     cerr<<"labelindex: "<<labelindex<<endl;
@@ -266,6 +286,7 @@ int main(int argc, char **argv)
 
     try{
         objFile.open(conf.out_dir+"/output.obj", ios::out);
+        cout<<"here"<<endl;
     }catch (exception& e){
         cerr << "could not create objfile" << endl;
     }
@@ -351,7 +372,7 @@ int main(int argc, char **argv)
            faceslabel = tmplabel;
        }
        //待删
-       faceslabel = tmplabel;
+      // faceslabel = tmplabel;
         if(!flag)
         break;
     }
